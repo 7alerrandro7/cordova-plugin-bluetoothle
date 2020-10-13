@@ -2934,7 +2934,6 @@ public class BluetoothLePlugin extends CordovaPlugin {
         addProperty(returnObj, keyRssi, rssi);
         addPropertyBytes(returnObj, keyAdvertisement, scanRecord);
         addProperty(returnObj, keyStatus, statusScanResult);
-        addProperty(returnObj, keyAppleDevice, result.getScanRecord().getManufacturerSpecificData(0x004c));
 
         PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, returnObj);
         pluginResult.setKeepCallback(true);
