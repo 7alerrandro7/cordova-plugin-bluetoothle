@@ -746,6 +746,8 @@ declare namespace BluetoothlePlugin {
     }
 
     interface ScanStatus extends DeviceInfo {
+        /** If its a apple device */
+        appleDevice: string,
         /** signal strength */
         rssi: number,
         /**
