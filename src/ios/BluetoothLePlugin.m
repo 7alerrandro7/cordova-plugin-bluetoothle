@@ -11,7 +11,6 @@ NSString *const keyAddress = @"address";
 NSString *const keyProperties = @"properties";
 NSString *const keyRssi = @"rssi";
 NSString *const keyAdvertisement = @"advertisement";
-NSString *const keyAppleDevice = @"appleDevice";
 NSString *const keyUuid = @"uuid";
 NSString *const keyService = @"service";
 NSString *const keyServices = @"services";
@@ -2123,10 +2122,6 @@ NSString *const operationWrite = @"write";
   [returnObj setValue:statusScanResult forKey:keyStatus];
   [returnObj setValue:RSSI forKey:keyRssi];
   [returnObj setValue:advertisement forKey:keyAdvertisement];
-
-  NSData* manufacturerData = [advertisementData valueForKey:CBAdvertisementDataManufacturerDataKey];
-  NSString* manufacturerDataString = [manufacturerData base64EncodedStringWithOptions:0];
-  [returnObj setValue:manufacturerDataString forKey:keyAppleDevice];
 
   CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:returnObj];
   [pluginResult setKeepCallbackAsBool:true];
